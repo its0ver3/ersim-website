@@ -46,7 +46,7 @@ export default function Philosophy() {
       {/* Parallax texture */}
       <div
         className="philosophy-texture absolute inset-0 opacity-[0.1] bg-cover bg-center"
-        style={{ backgroundImage: 'url(/mission.jpg)' }}
+        style={{ backgroundImage: `url(${import.meta.env.BASE_URL}mission.jpg)` }}
       />
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 md:px-12 text-center">

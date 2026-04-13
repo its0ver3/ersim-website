@@ -51,7 +51,7 @@ export default function Hero() {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: 'url(/Gemini_Generated_Image_v6hnwnv6hnwnv6hn.png)',
+          backgroundImage: `url(${import.meta.env.BASE_URL}Gemini_Generated_Image_v6hnwnv6hnwnv6hn.png)`,
         }}
       />
 
