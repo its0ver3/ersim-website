@@ -3,13 +3,13 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import DiagnosticShuffler from './features/DiagnosticShuffler'
 import TelemetryTypewriter from './features/TelemetryTypewriter'
-import CursorScheduler from './features/CursorScheduler'
+import SparklineProgress from './features/SparklineProgress'
 import { FEATURES } from '../constants/content'
 
 const CARDS = [
   { Component: DiagnosticShuffler, ...FEATURES[0] },
   { Component: TelemetryTypewriter, ...FEATURES[1] },
-  { Component: CursorScheduler, ...FEATURES[2] },
+  { Component: SparklineProgress, ...FEATURES[2] },
 ]
 
 export default function Features() {

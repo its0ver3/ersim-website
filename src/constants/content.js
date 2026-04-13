@@ -1,7 +1,7 @@
 export const BRAND = {
   name: 'ERSIM',
   tagline: 'Emergency Response Simulator',
-  description: 'Train 911 dispatchers with immersive simulation. Faster onboarding. Better outcomes.',
+  description: 'Train 911 call takers with immersive simulation. Faster onboarding. Better outcomes.',
   cta: 'Book a Consultation',
 }
 
@@ -15,7 +15,7 @@ export const HERO = {
   eyebrow: 'Emergency Response Training Platform',
   headingTop: 'ERSIM',
   headingBottom: 'Emergency Response Simulator',
-  subline: 'Train 911 dispatchers with immersive simulation. Faster onboarding. Better outcomes. Fewer critical errors.',
+  subline: 'Train 911 call takers with immersive simulation.\nFaster onboarding. Better outcomes.',
 }
 
 export const FEATURES = [
@@ -26,7 +26,7 @@ export const FEATURES = [
   },
   {
     title: 'Improve Call Outcomes',
-    description: 'Build the instincts that separate good dispatchers from great ones through realistic caller interactions.',
+    description: 'Build the instincts that separate good call takers from great ones through realistic caller interactions.',
     typewriterMessages: [
       '> DISPATCH 911-0247: Caller stabilized. Response time: 42s',
       '> PROTOCOL MATCH: 94.2% accuracy on medical triage',
@@ -45,8 +45,8 @@ export const FEATURES = [
 
 export const MISSION = {
   label: 'Our Mission',
-  headline: 'Every second counts. Every dispatcher matters.',
-  body: 'We believe the people who answer emergency calls deserve training as serious as the situations they face. ERSIM exists to close the gap between the classroom and the crisis — giving dispatchers the reflexes, confidence, and judgment to perform when lives are on the line.',
+  headline: 'Every second counts. Every call taker matters.',
+  body: 'We believe the people who answer emergency calls deserve training as serious as the situations they face. ERSIM exists to close the gap between the classroom and the crisis — giving call takers the reflexes, confidence, and judgment to perform when lives are on the line.',
 }
 
 export const PROTOCOL_STEPS = [
@@ -58,7 +58,7 @@ export const PROTOCOL_STEPS = [
   {
     number: '02',
     title: 'Train in Real-Time',
-    description: 'Dispatchers practice with AI-powered callers that adapt to their responses — building reflexes, not just knowledge.',
+    description: 'Call takers practice with AI-powered callers that adapt to their responses — building reflexes, not just knowledge.',
   },
   {
     number: '03',

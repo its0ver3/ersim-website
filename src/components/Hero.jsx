@@ -51,7 +51,7 @@ export default function Hero() {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url(${import.meta.env.BASE_URL}Gemini_Generated_Image_v6hnwnv6hnwnv6hn.png)`,
+          backgroundImage: `url(${import.meta.env.BASE_URL}Gemini_Generated_Image_m7h8u6m7h8u6m7h8.png)`,
         }}
       />
 
@@ -70,7 +70,7 @@ export default function Hero() {
           </span>
         </h1>
 
-        <p className="hero-subline text-cream/60 font-heading text-base md:text-lg max-w-xl leading-relaxed mb-8">
+        <p className="hero-subline text-cream/60 font-heading text-base md:text-lg max-w-xl leading-relaxed mb-8 whitespace-pre-line">
           {HERO.subline}
         </p>
 

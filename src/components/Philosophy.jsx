@@ -54,7 +54,7 @@ export default function Philosophy() {
           {MISSION.label}
         </span>
 
-        <h2 className="text-3xl md:text-5xl lg:text-6xl font-drama italic leading-[1.15] tracking-tight-custom mt-6 mb-10">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-drama italic leading-[1.15] tracking-tight-custom mt-6 mb-10 whitespace-nowrap">
           {headlineWords.map((word, i) => (
             <span
               key={i}
