@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-cream text-charcoal font-heading;
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    @apply bg-clay/20 text-charcoal;
+  }
+}
+
+@layer components {
+  .noise-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    pointer-events: none;
+    opacity: 0.05;
+  }
+
+  .magnetic-btn {
+    @apply relative overflow-hidden inline-flex items-center justify-center;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .magnetic-btn:hover {
+    transform: scale(1.03) translateY(-1px);
+  }
+
+  .magnetic-btn .btn-bg {
+    @apply absolute inset-0;
+    transform: translateY(100%);
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .magnetic-btn:hover .btn-bg {
+    transform: translateY(0%);
+  }
+
+  .cursor-blink {
+    animation: blink 1s step-end infinite;
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+  .pulse-dot {
+    animation: pulse-dot 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse-dot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.5); }
+  }
+}
+
+@layer utilities {
+  .tracking-tight-custom {
+    letter-spacing: -0.03em;
+  }
+
+  .tracking-tighter-custom {
+    letter-spacing: -0.05em;
+  }
+}
