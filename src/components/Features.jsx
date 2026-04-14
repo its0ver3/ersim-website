@@ -44,10 +44,11 @@ export default function Features() {
           Core Capabilities
         </span>
         <h2 className="font-heading font-bold text-3xl md:text-5xl tracking-tighter-custom text-charcoal mt-4">
-          Built for the moments
-          <br />
-          <span className="font-drama italic text-clay">that matter most.</span>
+          Built for the <span className="font-drama italic text-clay">real world.</span>
         </h2>
+        <p className="text-charcoal/50 text-base md:text-lg mt-4 max-w-2xl mx-auto leading-relaxed">
+          ERSIM is a full-stack CAD simulator with a wide range of call scenarios designed to help train new hires faster than traditional methods.
+        </p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">

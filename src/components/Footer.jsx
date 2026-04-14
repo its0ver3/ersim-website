@@ -1,4 +1,6 @@
+import { useNavigate, useLocation } from 'react-router-dom'
 import { BRAND } from '../constants/content'
+import { scrollToSection } from '../utils/scroll'
 
 const LINKS = [
   { label: 'Features', href: '#features' },
@@ -8,6 +10,9 @@ const LINKS = [
 ]
 
 export default function Footer() {
+  const navigate = useNavigate()
+  const location = useLocation()
+
   return (
     <footer className="bg-charcoal rounded-t-[4rem] -mt-16 relative z-10">
       <div className="max-w-7xl mx-auto px-6 md:px-12 pt-24 pb-8">
@@ -28,7 +33,11 @@ export default function Footer() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-cream/50 text-sm hover:text-cream transition-all duration-300 hover:translate-y-[-1px] inline-block"
+                onClick={(e) => {
+                  e.preventDefault()
+                  scrollToSection(link.href, navigate, location)
+                }}
+                className="text-cream/50 text-sm hover:text-cream transition-all duration-300 hover:translate-y-[-1px] inline-block cursor-pointer"
               >
                 {link.label}
               </a>

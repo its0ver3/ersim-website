@@ -43,7 +43,7 @@ export default function Contact() {
               <span className="font-drama italic text-clay">your agency.</span>
             </h2>
             <p className="text-charcoal/45 text-sm mt-4 leading-relaxed max-w-sm">
-              Whether you're exploring simulation training for the first time or scaling an existing program — we'll scope a plan that fits.
+              Book a demo and see how we build bespoke simulations tailored to your agency's protocols, call volume, and training goals.
             </p>
 
             <div className="mt-8 space-y-4">
@@ -53,7 +53,7 @@ export default function Contact() {
               </div>
               <div className="flex items-center gap-3">
                 <Phone size={15} className="text-moss/50" />
-                <span className="text-charcoal/60 text-sm">(800) 911-ERSM</span>
+                <span className="text-charcoal/60 text-sm">604-911-ERSM</span>
               </div>
               <div className="flex items-center gap-3">
                 <MapPin size={15} className="text-moss/50" />

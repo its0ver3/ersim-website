@@ -36,8 +36,6 @@ export default function Philosophy() {
     return () => ctx.revert()
   }, [])
 
-  const headlineWords = MISSION.headline.split(' ')
-
   return (
     <section
       ref={sectionRef}
@@ -46,7 +44,7 @@ export default function Philosophy() {
       {/* Parallax texture */}
       <div
         className="philosophy-texture absolute inset-0 opacity-[0.1] bg-cover bg-center"
-        style={{ backgroundImage: `url(${import.meta.env.BASE_URL}mission.jpg)` }}
+        style={{ backgroundImage: `url(${import.meta.env.BASE_URL}Gemini_Generated_Image_8unuyt8unuyt8unu.png)` }}
       />
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 md:px-12 text-center">
@@ -54,13 +52,19 @@ export default function Philosophy() {
           {MISSION.label}
         </span>
 
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-drama italic leading-[1.15] tracking-tight-custom mt-6 mb-10 whitespace-nowrap">
-          {headlineWords.map((word, i) => (
-            <span
-              key={i}
-              className="reveal-word inline-block mr-[0.3em] text-cream"
-            >
-              {word}
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-drama italic leading-[1.15] tracking-tight-custom mt-6 mb-10">
+          {MISSION.headline.split('. ').map((sentence, si, arr) => (
+            <span key={si} className="block md:inline">
+              {(si < arr.length - 1 ? sentence + '.' : sentence)
+                .split(' ')
+                .map((word, wi) => (
+                  <span
+                    key={wi}
+                    className="reveal-word inline-block mr-[0.3em] text-cream"
+                  >
+                    {word}
+                  </span>
+                ))}
             </span>
           ))}
         </h2>

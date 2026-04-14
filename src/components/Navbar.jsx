@@ -1,12 +1,21 @@
 import { useState, useEffect, useRef } from 'react'
+import { useNavigate, useLocation } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
 import MagneticButton from './MagneticButton'
 import { BRAND, NAV_LINKS } from '../constants/content'
+import { scrollToSection } from '../utils/scroll'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const navRef = useRef(null)
+  const navigate = useNavigate()
+  const location = useLocation()
+
+  const handleNavClick = (e, href) => {
+    e.preventDefault()
+    scrollToSection(href, navigate, location)
+  }
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -29,8 +38,13 @@ export default function Navbar() {
         }`}
       >
         <a
-          href="#"
-          className={`font-heading font-bold text-sm tracking-tight-custom px-4 transition-colors duration-500 ${
+          href="#/"
+          onClick={(e) => {
+            e.preventDefault()
+            navigate('/')
+            window.scrollTo({ top: 0, behavior: 'smooth' })
+          }}
+          className={`font-heading font-bold text-sm tracking-tight-custom px-4 transition-colors duration-500 cursor-pointer ${
             scrolled ? 'text-moss' : 'text-cream'
           }`}
         >
@@ -42,6 +56,7 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
+              onClick={(e) => handleNavClick(e, link.href)}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:translate-y-[-1px] ${
                 scrolled
                   ? 'text-charcoal/70 hover:text-charcoal hover:bg-charcoal/5'
@@ -56,8 +71,8 @@ export default function Navbar() {
         <div className="hidden lg:block">
           <MagneticButton
             variant="filled"
-            href="#contact"
-            className="!py-2.5 !px-5 !text-xs"
+            onClick={(e) => handleNavClick(e, '#contact')}
+            className="!py-2.5 !px-5 !text-xs cursor-pointer"
           >
             {BRAND.cta}
           </MagneticButton>
@@ -85,7 +100,10 @@ export default function Navbar() {
           <a
             key={link.href}
             href={link.href}
-            onClick={() => setMobileOpen(false)}
+            onClick={(e) => {
+              setMobileOpen(false)
+              handleNavClick(e, link.href)
+            }}
             className="text-cream text-3xl font-heading font-semibold tracking-tight-custom hover:text-clay transition-colors"
           >
             {link.label}
@@ -93,9 +111,11 @@ export default function Navbar() {
         ))}
         <MagneticButton
           variant="filled"
-          href="#contact"
-          className="mt-4"
-          onClick={() => setMobileOpen(false)}
+          className="mt-4 cursor-pointer"
+          onClick={(e) => {
+            setMobileOpen(false)
+            handleNavClick(e, '#contact')
+          }}
         >
           {BRAND.cta}
         </MagneticButton>

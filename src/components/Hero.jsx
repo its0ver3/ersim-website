@@ -1,10 +1,14 @@
 import { useEffect, useRef } from 'react'
+import { useNavigate, useLocation } from 'react-router-dom'
 import gsap from 'gsap'
 import MagneticButton from './MagneticButton'
 import { HERO, BRAND } from '../constants/content'
+import { scrollToSection } from '../utils/scroll'
 
 export default function Hero() {
   const containerRef = useRef(null)
+  const navigate = useNavigate()
+  const location = useLocation()
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -75,7 +79,14 @@ export default function Hero() {
         </p>
 
         <div className="hero-cta">
-          <MagneticButton variant="filled" className="!text-base">
+          <MagneticButton
+            variant="filled"
+            onClick={(e) => {
+              e.preventDefault()
+              scrollToSection('#contact', navigate, location)
+            }}
+            className="!text-base cursor-pointer"
+          >
             {BRAND.cta}
           </MagneticButton>
         </div>

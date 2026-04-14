@@ -1,25 +1,20 @@
 import { useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 const TEAM = [
   {
-    name: 'Marcus Cole',
+    name: 'Dean Disanjh',
     role: 'CEO & Co-Founder',
-    bio: 'Former 911 dispatch supervisor. 12 years in emergency communications.',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80&auto=format&fit=crop&crop=faces',
+    bio: 'Drawing from deep roots in both tech and healthcare, Dean is reshaping how innovative tools reach the frontline workers who need them most.',
+    image: `${import.meta.env.BASE_URL}Headshot - DEAN.jpg`,
   },
   {
-    name: 'Dr. Priya Agarwal',
-    role: 'Chief Science Officer',
-    bio: 'PhD in cognitive psychology. Specialist in high-stress decision training.',
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80&auto=format&fit=crop&crop=faces',
-  },
-  {
-    name: 'James Whitfield',
-    role: 'CTO',
-    bio: 'Previously engineering lead at Palantir. Built simulation systems for DoD.',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&q=80&auto=format&fit=crop&crop=faces',
+    name: 'Reid Betts',
+    role: 'CEO & Co-Founder',
+    bio: 'With years on the headset and over a decade in the classroom, Reid understands what it takes to build call takers who perform at the highest level.',
+    image: `${import.meta.env.BASE_URL}38984982_10214624819107649_4126351978085220352_n.jpg`,
   },
 ]
 
@@ -65,7 +60,7 @@ export default function Team() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {TEAM.map((member) => (
             <div
               key={member.name}
@@ -94,6 +89,15 @@ export default function Team() {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="text-center mt-10">
+          <Link
+            to="/about"
+            className="magnetic-btn px-7 py-3.5 rounded-full font-heading font-semibold text-sm tracking-wide bg-clay text-cream hover:text-cream transition-all duration-300"
+          >
+            <span className="relative z-10">Learn more about the team</span>
+          </Link>
         </div>
       </div>
     </section>

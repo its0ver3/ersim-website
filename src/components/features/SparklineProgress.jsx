@@ -221,7 +221,7 @@ export default function SparklineProgress() {
               strokeWidth="1.5"
               style={{
                 transform: visiblePoints.includes(i) ? 'scale(1)' : 'scale(0)',
-                transformOrigin: `${p.x}px ${p.y}px`,
+                transformOrigin: 'center center',
                 transformBox: 'fill-box',
                 transition: visiblePoints.includes(i)
                   ? 'transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1)'

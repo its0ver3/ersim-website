@@ -5,10 +5,10 @@ import { Check } from 'lucide-react'
 import MagneticButton from './MagneticButton'
 
 const INCLUDES = [
-  'Unlimited trainees',
-  'Custom scenario builder',
-  'Dedicated success manager',
-  'On-premise option',
+  '50+ trainees',
+  'Custom scenarios',
+  'Instructor Dashboards',
+  'Personalize training metrics',
 ]
 
 export default function Pricing() {
@@ -37,8 +37,9 @@ export default function Pricing() {
       ref={containerRef}
       className="py-24 md:py-32 px-6 md:px-12"
     >
-      <div className="max-w-md mx-auto">
-        <div className="pricing-card relative overflow-hidden bg-charcoal rounded-4xl p-8 md:p-10 flex flex-col items-center text-center transition-all duration-500 ease-out hover:scale-[1.02] hover:shadow-2xl hover:shadow-charcoal/50 hover:ring-1 hover:ring-cream/[0.06]">
+      <div className="max-w-lg mx-auto">
+        <div className="pricing-card luminous-border transition-all duration-500 ease-out hover:scale-[1.02]">
+        <div className="relative overflow-hidden bg-charcoal rounded-4xl p-10 md:p-14 flex flex-col items-center text-center shadow-[inset_0_1px_1px_rgba(242,240,233,0.05)] hover:ring-1 hover:ring-cream/[0.06]">
           {/* Subtle texture overlay */}
           <div className="absolute inset-0 opacity-[0.035] pointer-events-none">
             <svg width="100%" height="100%">
@@ -55,7 +56,7 @@ export default function Pricing() {
             </span>
 
             <h2 className="font-drama italic text-xl md:text-2xl text-cream/80 mt-2 leading-snug">
-              Deploy with confidence.
+              Train with confidence.
             </h2>
 
             <ul className="mt-6 space-y-2.5 inline-flex flex-col items-start">
@@ -77,6 +78,7 @@ export default function Pricing() {
               Onboarding in 2 – 4 weeks
             </span>
           </div>
+        </div>
         </div>
       </div>
     </section>
