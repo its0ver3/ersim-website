@@ -9,7 +9,7 @@ import { scrollToSection } from '../utils/scroll'
 const TEAM = [
   {
     name: 'Dean Disanjh',
-    role: 'CEO & Co-Founder',
+    role: 'CTO & Co-Founder',
     bio: 'Passionate about transforming emergency response training through technology. Dedicated to giving call takers the tools they need to save lives.',
     image: `${import.meta.env.BASE_URL}Headshot - DEAN.jpg`,
   },
@@ -17,7 +17,7 @@ const TEAM = [
     name: 'Reid Betts',
     role: 'CEO & Co-Founder',
     bio: 'Brings hands-on experience and a relentless drive to modernize how agencies prepare their teams for the moments that matter most.',
-    image: `${import.meta.env.BASE_URL}38984982_10214624819107649_4126351978085220352_n.jpg`,
+    image: `${import.meta.env.BASE_URL}reid-heashot.jpg`,
   },
 ]
 

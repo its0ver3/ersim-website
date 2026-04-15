@@ -68,6 +68,7 @@ export default function Hero() {
         <h1 className="mb-6">
           <span className="hero-heading-top block font-heading font-bold text-cream text-4xl md:text-6xl lg:text-7xl tracking-tighter-custom leading-[0.95]">
             {HERO.headingTop}
+            <img src={`${import.meta.env.BASE_URL}960px-Maple_Leaf.svg.png`} alt="" className="inline-block h-5 md:h-6 lg:h-8 w-auto ml-2 -mt-1" />
           </span>
           <span className="hero-heading-bottom block font-drama italic text-clay text-xl md:text-2xl lg:text-3xl tracking-tight-custom leading-[1.1] mt-2">
             {HERO.headingBottom}

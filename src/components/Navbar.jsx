@@ -49,6 +49,7 @@ export default function Navbar() {
           }`}
         >
           {BRAND.name}
+          <img src={`${import.meta.env.BASE_URL}960px-Maple_Leaf.svg.png`} alt="" className="inline-block h-3 w-3 ml-1 -mt-0.5" />
         </a>
 
         <div className="hidden lg:flex items-center gap-1">

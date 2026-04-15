@@ -6,7 +6,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 const TEAM = [
   {
     name: 'Dean Disanjh',
-    role: 'CEO & Co-Founder',
+    role: 'CTO & Co-Founder',
     bio: 'Drawing from deep roots in both tech and healthcare, Dean is reshaping how innovative tools reach the frontline workers who need them most.',
     image: `${import.meta.env.BASE_URL}Headshot - DEAN.jpg`,
   },
@@ -14,7 +14,7 @@ const TEAM = [
     name: 'Reid Betts',
     role: 'CEO & Co-Founder',
     bio: 'With years on the headset and over a decade in the classroom, Reid understands what it takes to build call takers who perform at the highest level.',
-    image: `${import.meta.env.BASE_URL}38984982_10214624819107649_4126351978085220352_n.jpg`,
+    image: `${import.meta.env.BASE_URL}reid-heashot.jpg`,
   },
 ]
 
