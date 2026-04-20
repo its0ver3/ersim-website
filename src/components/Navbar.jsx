@@ -14,7 +14,12 @@ export default function Navbar() {
 
   const handleNavClick = (e, href) => {
     e.preventDefault()
-    scrollToSection(href, navigate, location)
+    if (href.startsWith('/')) {
+      navigate(href)
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    } else {
+      scrollToSection(href, navigate, location)
+    }
   }
 
   useEffect(() => {

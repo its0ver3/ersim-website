@@ -6,7 +6,7 @@ export const BRAND = {
 }
 
 export const NAV_LINKS = [
-  { label: 'Features', href: '#features' },
+  { label: 'Products', href: '/products' },
   { label: 'Team', href: '#team' },
   { label: 'Pricing', href: '#pricing' },
 ]
@@ -115,7 +115,7 @@ export const PRICING_TIERS = [
 ]
 
 export const FOOTER = {
-  platform: ['Features', 'Protocol', 'Pricing', 'Documentation'],
+  platform: ['Products', 'Protocol', 'Pricing', 'Documentation'],
   company: ['About', 'Careers', 'Contact', 'Press'],
   legal: ['Privacy Policy', 'Terms of Service', 'Security'],
 }
