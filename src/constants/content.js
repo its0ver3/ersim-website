@@ -1,7 +1,7 @@
 export const BRAND = {
   name: 'ERSIM',
   tagline: 'Emergency Response Simulator',
-  description: 'Train 911 call takers with immersive simulation. Faster onboarding. Better outcomes.',
+  description: 'Train 911 call takers with immersive simulation. Faster onboarding. Rapid upskilling.',
   cta: 'Book a Consultation',
 }
 
@@ -15,7 +15,7 @@ export const HERO = {
   eyebrow: 'Emergency Response Training Platform',
   headingTop: 'ERSIM',
   headingBottom: 'Emergency Response Simulator',
-  subline: 'Train 911 call takers with immersive simulation.\nFaster onboarding. Better outcomes.',
+  subline: 'Train 911 call takers with immersive simulation.\nFaster onboarding. Rapid upskilling.',
 }
 
 export const FEATURES = [
@@ -28,16 +28,16 @@ export const FEATURES = [
     title: 'Improve Call Outcomes',
     description: 'Build the instincts that separate good call takers from great ones through realistic caller interactions.',
     typewriterMessages: [
-      '> DISPATCH 911-0247: Caller stabilized. Response time: 42s',
-      '> PROTOCOL MATCH: 94.2% accuracy on medical triage',
-      '> SCENARIO COMPLETE: Zero critical delays detected',
-      '> TRAINEE #118: Confidence index +23% this week',
-      '> LIVE DRILL: Multi-vehicle incident — all units dispatched',
-      '> ASSESSMENT: De-escalation protocol executed flawlessly',
+      '> HELP DISPATCHED: Units en route in 1m 12s (15% faster)',
+      '> CALLER REASSURED: Calm tone maintained through duration',
+      '> TIME TO ADDRESS: 48s — 50% faster than last session',
+      '> TRIAGE CAPTURED: Location, callback, suspect description',
+      '> DE-ESCALATION: Caller steadied within 22s of contact',
+      '> SESSION REVIEW: Top quartile performance this week',
     ],
   },
   {
-    title: 'Structure Actionable Feedback',
+    title: 'Actionable Feedback',
     description: 'Every session generates targeted insights — no more guessing what to improve next.',
     schedulerLabel: 'Weekly Review Cadence',
   },
@@ -45,8 +45,8 @@ export const FEATURES = [
 
 export const MISSION = {
   label: 'Our Mission',
-  headline: 'Every second counts. Every call taker matters.',
-  body: 'We believe the people who answer emergency calls deserve training as serious as the situations they face. ERSIM exists to close the gap between the classroom and the crisis — giving call takers the reflexes, confidence, and judgment to perform when lives are on the line.',
+  headline: 'Create high performing call takers in less time.',
+  body: 'We believe the people who answer emergency calls deserve training as serious as the situations they face. ERSIM exists to close the gap between the classroom and the crisis, giving call takers the reflexes, confidence, and judgment to perform when lives are on the line.',
 }
 
 export const PROTOCOL_STEPS = [
@@ -118,4 +118,62 @@ export const FOOTER = {
   platform: ['Features', 'Protocol', 'Pricing', 'Documentation'],
   company: ['About', 'Careers', 'Contact', 'Press'],
   legal: ['Privacy Policy', 'Terms of Service', 'Security'],
+}
+
+export const PRODUCTS = {
+  header: {
+    eyebrow: 'Our Products',
+    headline: 'Built for every seat in the comms centre.',
+    sub: 'One platform, three simulators, each purpose-built for the people who answer, dispatch, and respond.',
+  },
+  soteria: {
+    status: 'Available Now',
+    name: 'Soteria',
+    tagline: 'The 911 call taker simulator.',
+    body: 'Soteria compresses months of on-the-job, one-on-one training into weeks of immersive practice. Trainees take realistic calls, get graded against a proprietary rubric, and build the reflexes of a veteran before they ever pick up a live line.',
+    pillars: [
+      {
+        icon: 'ServerOff',
+        title: 'Zero IT Setup',
+        body: 'Browser-based. No installs, no infrastructure, no deployment headaches.',
+      },
+      {
+        icon: 'LayoutGrid',
+        title: 'Trainer Dashboards',
+        body: 'Monitor live sessions, review recordings, and track progress across your cohort.',
+      },
+      {
+        icon: 'Users',
+        title: 'Scales to 50+ Trainees',
+        body: 'Onboard entire classes without rebuilding anything on your end.',
+      },
+      {
+        icon: 'ClipboardCheck',
+        title: 'Proprietary Rubric',
+        body: 'Objective scoring against the patterns that separate good call takers from great ones.',
+      },
+    ],
+    cta: { label: 'Book a Consultation', target: '#contact' },
+  },
+  upcoming: {
+    eyebrow: 'Coming Soon',
+    headline: 'More of the comms centre, on the way.',
+    products: [
+      {
+        name: 'Marathon',
+        tagline: 'The dispatch trainer.',
+        body: "Built on the same engine as Soteria, tuned for the dispatcher's seat. Train unit assignment, radio discipline, and multi-incident awareness under pressure — without tying up a veteran for weeks.",
+      },
+      {
+        name: 'Apollo',
+        tagline: 'The EMS + fire trainer.',
+        body: 'Bringing the Soteria approach to paramedics and firefighters. Realistic scenarios, measurable outcomes, and the same proprietary rubric — adapted for the people who show up on scene.',
+      },
+    ],
+  },
+  closing: {
+    headline: 'Ready to modernize your training?',
+    sub: "Whether you're a small agency or a large department, we'd love to show you what ERSIM can do.",
+    cta: { label: 'Book a Consultation', target: '#contact' },
+  },
 }
