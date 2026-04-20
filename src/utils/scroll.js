@@ -9,3 +9,11 @@ export function scrollToSection(href, navigate, location) {
     }, 150)
   }
 }
+
+export function handleNavClick(href, navigate, location) {
+  if (href.startsWith('/')) {
+    navigate(href)
+  } else {
+    scrollToSection(href, navigate, location)
+  }
+}

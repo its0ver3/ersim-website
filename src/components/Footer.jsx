@@ -1,6 +1,6 @@
 import { useNavigate, useLocation } from 'react-router-dom'
 import { BRAND } from '../constants/content'
-import { scrollToSection } from '../utils/scroll'
+import { handleNavClick } from '../utils/scroll'
 
 const LINKS = [
   { label: 'Products', href: '/products' },
@@ -36,12 +36,7 @@ export default function Footer() {
                 href={link.href}
                 onClick={(e) => {
                   e.preventDefault()
-                  if (link.href.startsWith('/')) {
-                    navigate(link.href)
-                    window.scrollTo({ top: 0, behavior: 'smooth' })
-                  } else {
-                    scrollToSection(link.href, navigate, location)
-                  }
+                  handleNavClick(link.href, navigate, location)
                 }}
                 className="text-cream/50 text-sm hover:text-cream transition-all duration-300 hover:translate-y-[-1px] inline-block cursor-pointer"
               >

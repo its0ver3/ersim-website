@@ -4,6 +4,7 @@ import { ArrowLeft, ServerOff, LayoutGrid, Users, ClipboardCheck } from 'lucide-
 import gsap from 'gsap'
 import NoiseOverlay from '../components/NoiseOverlay'
 import Footer from '../components/Footer'
+import MagneticButton from '../components/MagneticButton'
 import DiagnosticShuffler from '../components/features/DiagnosticShuffler'
 import { BRAND, PRODUCTS } from '../constants/content'
 import { scrollToSection } from '../utils/scroll'
@@ -22,9 +23,6 @@ export default function Products() {
 
   useEffect(() => {
     window.scrollTo(0, 0)
-  }, [])
-
-  useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.utils.toArray('.reveal-section').forEach((el) => {
         gsap.from(el, {
@@ -48,7 +46,6 @@ export default function Products() {
     <>
       <NoiseOverlay />
 
-      {/* Floating nav */}
       <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2 px-3 py-2 rounded-full bg-cream/70 backdrop-blur-xl border border-charcoal/10 shadow-lg shadow-charcoal/5">
         <Link
           to="/"
@@ -66,7 +63,6 @@ export default function Products() {
       </nav>
 
       <main ref={containerRef}>
-        {/* Page hero */}
         <section className="reveal-section pt-36 pb-16 md:pt-44 md:pb-20 px-6 md:px-12">
           <div className="max-w-5xl mx-auto text-center">
             <span className="font-mono text-xs text-charcoal/40 uppercase tracking-widest">
@@ -81,11 +77,9 @@ export default function Products() {
           </div>
         </section>
 
-        {/* Soteria flagship */}
         <section className="reveal-section relative py-16 md:py-24 px-6 md:px-12 bg-clay/[0.04]">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              {/* Left column */}
               <div>
                 <span className="inline-block px-3 py-1 rounded-full text-[11px] font-mono font-medium bg-clay/15 text-clay border border-clay/20 uppercase tracking-wider">
                   {PRODUCTS.soteria.status}
@@ -99,22 +93,20 @@ export default function Products() {
                 <p className="text-charcoal/60 text-base leading-relaxed mt-6 max-w-xl">
                   {PRODUCTS.soteria.body}
                 </p>
-                <button
+                <MagneticButton
+                  variant="filled"
                   onClick={goToContact}
-                  className="magnetic-btn mt-8 px-7 py-3.5 rounded-full font-heading font-semibold text-sm tracking-wide bg-clay text-cream hover:text-cream cursor-pointer"
+                  className="mt-8 cursor-pointer"
                 >
-                  <span className="btn-bg rounded-full bg-moss" />
-                  <span className="relative z-10">{PRODUCTS.soteria.cta.label}</span>
-                </button>
+                  {PRODUCTS.soteria.cta.label}
+                </MagneticButton>
               </div>
 
-              {/* Right column — product visual */}
               <div className="bg-white/60 border border-charcoal/[0.08] rounded-4xl p-6 shadow-md shadow-charcoal/[0.04]">
                 <DiagnosticShuffler />
               </div>
             </div>
 
-            {/* Capability pillars */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-16">
               {PRODUCTS.soteria.pillars.map((pillar) => {
                 const Icon = PILLAR_ICONS[pillar.icon]
@@ -139,7 +131,6 @@ export default function Products() {
           </div>
         </section>
 
-        {/* Coming Soon */}
         <section className="reveal-section py-20 md:py-28 px-6 md:px-12 bg-moss/[0.03]">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-14">
@@ -158,7 +149,7 @@ export default function Products() {
                   className="relative overflow-hidden bg-white/60 border border-charcoal/[0.08] rounded-4xl p-8 md:p-10"
                 >
                   <span className="inline-block px-3 py-1 rounded-full text-[11px] font-mono font-medium bg-charcoal/10 text-charcoal/60 border border-charcoal/15 uppercase tracking-wider">
-                    Coming Soon
+                    {PRODUCTS.upcoming.eyebrow}
                   </span>
                   <h3 className="font-heading font-bold text-4xl md:text-5xl tracking-tighter-custom text-charcoal mt-5">
                     {p.name}
@@ -175,7 +166,6 @@ export default function Products() {
           </div>
         </section>
 
-        {/* Closing CTA */}
         <section className="reveal-section py-24 md:py-32 px-6 md:px-12">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-heading font-bold text-3xl md:text-4xl tracking-tighter-custom text-charcoal">
@@ -185,13 +175,13 @@ export default function Products() {
               {PRODUCTS.closing.sub}
             </p>
             <div className="mt-8">
-              <button
+              <MagneticButton
+                variant="filled"
                 onClick={goToContact}
-                className="magnetic-btn px-7 py-3.5 rounded-full font-heading font-semibold text-sm tracking-wide bg-clay text-cream hover:text-cream cursor-pointer"
+                className="cursor-pointer"
               >
-                <span className="btn-bg rounded-full bg-moss" />
-                <span className="relative z-10">{PRODUCTS.closing.cta.label}</span>
-              </button>
+                {PRODUCTS.closing.cta.label}
+              </MagneticButton>
             </div>
           </div>
         </section>
