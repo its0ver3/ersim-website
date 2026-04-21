@@ -1,6 +1,7 @@
 import NoiseOverlay from './components/NoiseOverlay'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
+import Features from './components/Features'
 import Philosophy from './components/Philosophy'
 import Team from './components/Team'
 import Pricing from './components/Pricing'
@@ -14,6 +15,7 @@ function App() {
       <Navbar />
       <main>
         <Hero />
+        <Features />
         <Philosophy />
         <Team />
         <Pricing />

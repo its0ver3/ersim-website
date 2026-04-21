@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 
-const DATA_POINTS = [62, 58, 71, 75, 82, 94]
-const SESSION_LABELS = ['C1', 'C2', 'C3', 'C4', 'C5', 'C6']
+const DATA_POINTS = [94, 82, 75, 68, 58, 46]
+const SESSION_LABELS = ['W1', 'W2', 'W3', 'W4', 'W5', 'W6']
 
 const PADDING = { top: 8, right: 8, bottom: 4, left: 8 }
 const SVG_WIDTH = 280
@@ -121,7 +121,7 @@ export default function SparklineProgress() {
       if (cancelled) return
 
       // Count up score
-      await countUp(94.2, 800)
+      await countUp(46, 800)
       if (cancelled) return
 
       // Hold
@@ -157,7 +157,7 @@ export default function SparklineProgress() {
       {/* Header */}
       <div className="flex items-center justify-between mb-2">
         <span className="font-mono text-[10px] text-charcoal/40 uppercase tracking-widest">
-          Call Duration
+          Time to Unsupervised Call
         </span>
         <span
           className="font-heading font-bold text-lg text-clay tabular-nums"

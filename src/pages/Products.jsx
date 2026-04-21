@@ -1,18 +1,18 @@
 import { useEffect, useRef } from 'react'
 import { Link, useNavigate, useLocation } from 'react-router-dom'
-import { ArrowLeft, ServerOff, LayoutGrid, Users, ClipboardCheck } from 'lucide-react'
+import { ArrowLeft, ServerOff, LayoutGrid, ShieldCheck, ClipboardCheck } from 'lucide-react'
 import gsap from 'gsap'
 import NoiseOverlay from '../components/NoiseOverlay'
 import Footer from '../components/Footer'
 import MagneticButton from '../components/MagneticButton'
-import DiagnosticShuffler from '../components/features/DiagnosticShuffler'
+import LiveSimPanel from '../components/features/LiveSimPanel'
 import { BRAND, PRODUCTS } from '../constants/content'
 import { scrollToSection } from '../utils/scroll'
 
 const PILLAR_ICONS = {
   ServerOff,
   LayoutGrid,
-  Users,
+  ShieldCheck,
   ClipboardCheck,
 }
 
@@ -63,28 +63,16 @@ export default function Products() {
       </nav>
 
       <main ref={containerRef}>
-        <section className="reveal-section pt-36 pb-16 md:pt-44 md:pb-20 px-6 md:px-12">
-          <div className="max-w-5xl mx-auto text-center">
-            <span className="font-mono text-xs text-charcoal/40 uppercase tracking-widest">
-              {PRODUCTS.header.eyebrow}
-            </span>
-            <h1 className="font-heading font-bold text-4xl md:text-6xl tracking-tighter-custom text-charcoal mt-4">
-              {PRODUCTS.header.headline}
-            </h1>
-            <p className="text-charcoal/50 text-base md:text-lg font-heading max-w-2xl mx-auto leading-relaxed mt-6">
-              {PRODUCTS.header.sub}
-            </p>
-          </div>
-        </section>
-
-        <section className="reveal-section relative py-16 md:py-24 px-6 md:px-12 bg-clay/[0.04]">
+        <section className="reveal-section relative pt-36 pb-16 md:pt-44 md:pb-24 px-6 md:px-12 bg-clay/[0.04]">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <span className="inline-block px-3 py-1 rounded-full text-[11px] font-mono font-medium bg-clay/15 text-clay border border-clay/20 uppercase tracking-wider">
+                <span className="inline-block px-3 py-1 rounded-full text-[11px] font-mono font-medium bg-[#3F8A5A]/15 text-[#3F8A5A] border border-[#3F8A5A]/25 uppercase tracking-wider">
                   {PRODUCTS.soteria.status}
                 </span>
-                <h2 className="font-heading font-bold text-6xl md:text-7xl tracking-tighter-custom text-charcoal mt-5">
+                <h2
+                  className="font-heading font-bold text-6xl md:text-7xl tracking-tighter-custom mt-5 bg-gradient-to-br from-[#CEB875] via-[#C9A24B] to-[#A07B35] bg-clip-text text-transparent"
+                >
                   {PRODUCTS.soteria.name}
                 </h2>
                 <p className="font-heading text-lg md:text-xl text-clay mt-2">
@@ -102,9 +90,7 @@ export default function Products() {
                 </MagneticButton>
               </div>
 
-              <div className="bg-white/60 border border-charcoal/[0.08] rounded-4xl p-6 shadow-md shadow-charcoal/[0.04]">
-                <DiagnosticShuffler />
-              </div>
+              <LiveSimPanel />
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-16">
@@ -128,6 +114,82 @@ export default function Products() {
                 )
               })}
             </div>
+
+            <div className="mt-24 md:mt-28">
+              <div className="text-center max-w-2xl mx-auto">
+                <span className="font-mono text-xs text-charcoal/40 uppercase tracking-widest">
+                  {PRODUCTS.soteria.packages.eyebrow}
+                </span>
+                <h3 className="font-drama italic text-3xl md:text-4xl text-charcoal mt-4 leading-snug">
+                  {PRODUCTS.soteria.packages.headline}
+                </h3>
+                <p className="text-charcoal/55 text-sm md:text-base mt-4 leading-relaxed">
+                  {PRODUCTS.soteria.packages.sub}
+                </p>
+              </div>
+
+              <div className="relative mt-12 max-w-4xl mx-auto bg-cream rounded-4xl border border-charcoal/[0.12] shadow-md shadow-charcoal/[0.04] overflow-hidden">
+                <div className="absolute inset-0 opacity-[0.035] pointer-events-none">
+                  <svg width="100%" height="100%">
+                    <filter id="deploymentNoise">
+                      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" stitchTiles="stitch" />
+                    </filter>
+                    <rect width="100%" height="100%" filter="url(#deploymentNoise)" />
+                  </svg>
+                </div>
+
+                <div className="relative z-10 divide-y divide-charcoal/[0.08]">
+                  {PRODUCTS.soteria.packages.tiers.map((tier) => (
+                    <div
+                      key={tier.name}
+                      className={`p-8 md:p-10 ${tier.emphasized ? 'bg-[#C9A24B]/[0.035]' : ''}`}
+                    >
+                      <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3 md:gap-6">
+                        <div className="flex items-baseline gap-5 md:gap-6">
+                          <span className="font-heading font-bold text-4xl md:text-5xl tracking-tighter-custom bg-gradient-to-br from-[#CEB875] via-[#C9A24B] to-[#A07B35] bg-clip-text text-transparent tabular-nums leading-none">
+                            {tier.numeral}
+                          </span>
+                          <div>
+                            <h4 className="font-heading font-bold text-xl md:text-2xl uppercase tracking-widest text-charcoal">
+                              {tier.name}
+                            </h4>
+                            <p className="text-charcoal/60 text-sm mt-1.5 leading-relaxed">
+                              {tier.scope}
+                            </p>
+                          </div>
+                        </div>
+                        <span className="font-mono text-[11px] uppercase tracking-widest text-charcoal/45 whitespace-nowrap md:mt-2">
+                          Onboarding · {tier.onboarding}
+                        </span>
+                      </div>
+
+                      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-8 mt-6 pt-5 border-t border-charcoal/[0.08]">
+                        {tier.specs.map((spec) => (
+                          <div key={spec.label}>
+                            <div className="font-mono text-[10px] uppercase tracking-widest text-charcoal/40">
+                              {spec.label}
+                            </div>
+                            <div className="font-heading text-sm font-medium text-charcoal/85 mt-1.5 leading-snug">
+                              {spec.value}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mt-10 flex justify-center">
+                <MagneticButton
+                  variant="filled"
+                  onClick={goToContact}
+                  className="cursor-pointer"
+                >
+                  {PRODUCTS.soteria.packages.cta.label}
+                </MagneticButton>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -149,12 +211,14 @@ export default function Products() {
                   className="relative overflow-hidden bg-white/60 border border-charcoal/[0.08] rounded-4xl p-8 md:p-10"
                 >
                   <span className="inline-block px-3 py-1 rounded-full text-[11px] font-mono font-medium bg-charcoal/10 text-charcoal/60 border border-charcoal/15 uppercase tracking-wider">
-                    {PRODUCTS.upcoming.eyebrow}
+                    {p.status}
                   </span>
-                  <h3 className="font-heading font-bold text-4xl md:text-5xl tracking-tighter-custom text-charcoal mt-5">
+                  <h3
+                    className={`font-heading font-bold text-6xl md:text-7xl tracking-tighter-custom mt-5 ${p.headingClass}`}
+                  >
                     {p.name}
                   </h3>
-                  <p className="font-heading text-base md:text-lg text-moss mt-1.5">
+                  <p className={`font-heading text-lg md:text-xl mt-2 ${p.taglineColor}`}>
                     {p.tagline}
                   </p>
                   <p className="text-charcoal/55 text-sm md:text-base leading-relaxed mt-5 max-w-md">

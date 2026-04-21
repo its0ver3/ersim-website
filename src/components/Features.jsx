@@ -7,9 +7,9 @@ import SparklineProgress from './features/SparklineProgress'
 import { FEATURES } from '../constants/content'
 
 const CARDS = [
-  { Component: DiagnosticShuffler, ...FEATURES[0] },
+  { Component: SparklineProgress, ...FEATURES[0] },
   { Component: TelemetryTypewriter, ...FEATURES[1] },
-  { Component: SparklineProgress, ...FEATURES[2] },
+  { Component: DiagnosticShuffler, ...FEATURES[2] },
 ]
 
 export default function Features() {
@@ -43,11 +43,11 @@ export default function Features() {
         <span className="font-mono text-xs text-charcoal/40 uppercase tracking-widest">
           Core Capabilities
         </span>
-        <h2 className="font-heading font-bold text-3xl md:text-5xl tracking-tighter-custom text-charcoal mt-4">
-          Built for the <span className="font-drama italic text-clay">real world.</span>
+        <h2 className="font-heading font-bold text-3xl md:text-5xl tracking-tighter-custom text-clay mt-4">
+          Train call takers in weeks, not months.
         </h2>
         <p className="text-charcoal/50 text-base md:text-lg mt-4 max-w-2xl mx-auto leading-relaxed">
-          ERSIM is a full-stack CAD simulator with a wide range of call scenarios designed to help train new hires faster than traditional methods.
+          ERSIM is a CAD simulator with a wide range of call scenarios designed to help train new hires faster than traditional methods.
         </p>
       </div>
 

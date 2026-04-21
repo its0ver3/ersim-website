@@ -57,7 +57,7 @@ export default function Contact() {
               </div>
               <div className="flex items-center gap-3">
                 <MapPin size={15} className="text-moss/50" />
-                <span className="text-charcoal/60 text-sm">Vancouver, BC</span>
+                <span className="text-charcoal/60 text-sm">2800 Douglas Rd, Burnaby, BC</span>
               </div>
             </div>
           </div>

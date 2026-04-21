@@ -17,28 +17,28 @@ export default function Hero() {
       tl.from('.hero-eyebrow', {
         y: 40,
         opacity: 0,
-        duration: 0.8,
-        delay: 0.3,
+        duration: 0.5,
+        delay: 0.1,
       })
         .from(
           '.hero-heading-top',
-          { y: 40, opacity: 0, duration: 0.8 },
-          '-=0.5'
+          { y: 40, opacity: 0, duration: 0.5 },
+          '-=0.35'
         )
         .from(
           '.hero-heading-bottom',
-          { y: 60, opacity: 0, duration: 1 },
-          '-=0.5'
+          { y: 60, opacity: 0, duration: 0.6 },
+          '-=0.35'
         )
         .from(
           '.hero-subline',
-          { y: 30, opacity: 0, duration: 0.8 },
-          '-=0.4'
+          { y: 30, opacity: 0, duration: 0.5 },
+          '-=0.35'
         )
         .from(
           '.hero-cta',
-          { y: 30, opacity: 0, duration: 0.8 },
-          '-=0.4'
+          { y: 30, opacity: 0, duration: 0.5 },
+          '-=0.35'
         )
     }, containerRef)
 
@@ -63,7 +63,6 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/70 to-charcoal/20" />
       <div className="absolute inset-0 bg-gradient-to-r from-charcoal/60 via-transparent to-transparent" />
 
-      {/* Content — pushed to bottom-left */}
       <div className="relative z-10 h-full flex flex-col justify-end px-6 pb-16 md:px-12 lg:px-20 lg:pb-24 max-w-5xl">
         <h1 className="mb-6">
           <span className="hero-heading-top block font-heading font-bold text-cream text-4xl md:text-6xl lg:text-7xl tracking-tighter-custom leading-[0.95]">

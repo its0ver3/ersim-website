@@ -43,7 +43,7 @@ export default function Philosophy() {
     >
       {/* Parallax texture */}
       <div
-        className="philosophy-texture absolute inset-0 opacity-[0.1] bg-cover bg-center"
+        className="philosophy-texture absolute inset-0 opacity-[0.1] bg-cover bg-center blur-sm"
         style={{ backgroundImage: `url(${import.meta.env.BASE_URL}Gemini_Generated_Image_8unuyt8unuyt8unu.png)` }}
       />
 

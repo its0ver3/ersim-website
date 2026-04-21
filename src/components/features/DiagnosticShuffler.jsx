@@ -3,27 +3,30 @@ import { useState, useEffect, useRef } from 'react'
 const SCENARIOS = [
   {
     label: 'Scenario Generation',
-    detail: 'Cardiac arrest, caller panicking',
+    detail: 'Armed robbery at convenience store',
     accent: 'bg-clay/15 text-clay border-clay/20',
     bar: 'bg-clay/50',
     metrics: [85, 92, 78],
-    metricLabels: ['Complexity', 'Realism', 'Urgency'],
+    metricLabels: ['Location', 'Tombstone', 'Safety'],
+    improvement: 'Confirm suspect direction of travel',
   },
   {
     label: 'Adaptive Difficulty',
     detail: 'Multi-vehicle collision, low visibility',
-    accent: 'bg-moss/15 text-moss border-moss/20',
-    bar: 'bg-moss/50',
+    accent: 'bg-clay/15 text-clay border-clay/20',
+    bar: 'bg-clay/50',
     metrics: [68, 95, 88],
-    metricLabels: ['Complexity', 'Realism', 'Urgency'],
+    metricLabels: ['Location', 'Tombstone', 'Safety'],
+    improvement: 'Confirm mile marker earlier in call',
   },
   {
     label: 'Rapid Onboarding',
     detail: 'Domestic disturbance, child present',
-    accent: 'bg-charcoal/10 text-charcoal/70 border-charcoal/10',
-    bar: 'bg-charcoal/30',
+    accent: 'bg-clay/15 text-clay border-clay/20',
+    bar: 'bg-clay/50',
     metrics: [72, 84, 91],
-    metricLabels: ['Complexity', 'Realism', 'Urgency'],
+    metricLabels: ['Location', 'Tombstone', 'Safety'],
+    improvement: 'Ask about weapons before dispatching',
   },
 ]
 
@@ -55,7 +58,7 @@ export default function DiagnosticShuffler() {
   const isVisible = direction === 'enter'
 
   return (
-    <div className="relative h-48 w-full flex flex-col">
+    <div className="relative h-56 w-full flex flex-col">
       {/* Progress dots */}
       <div className="flex items-center gap-1.5 mb-3">
         {SCENARIOS.map((_, i) => (
@@ -83,14 +86,9 @@ export default function DiagnosticShuffler() {
         }}
       >
         <div className="flex items-start justify-between mb-3">
-          <div>
-            <span className="font-mono text-[10px] text-charcoal/40 uppercase tracking-widest">
-              {scenario.label}
-            </span>
-            <p className="text-sm text-charcoal/80 mt-1 font-heading font-medium">
-              {scenario.detail}
-            </p>
-          </div>
+          <p className="text-sm text-charcoal/80 font-heading font-medium">
+            {scenario.detail}
+          </p>
           <span className={`px-2 py-0.5 rounded-full text-[10px] font-mono font-medium border ${scenario.accent}`}>
             ACTIVE
           </span>
@@ -117,6 +115,16 @@ export default function DiagnosticShuffler() {
               </span>
             </div>
           ))}
+        </div>
+
+        {/* Improvement note */}
+        <div className="mt-3 pt-2 border-t border-charcoal/[0.06] flex items-start gap-1.5">
+          <span className="font-mono text-[9px] text-clay/70 uppercase tracking-wider mt-[1px]">
+            Fix
+          </span>
+          <span className="text-[11px] text-charcoal/60 leading-snug">
+            {scenario.improvement}
+          </span>
         </div>
       </div>
     </div>

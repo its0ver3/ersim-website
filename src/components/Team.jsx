@@ -8,13 +8,19 @@ const TEAM = [
     name: 'Dean Disanjh',
     role: 'CTO & Co-Founder',
     bio: 'Drawing from deep roots in both tech and healthcare, Dean is reshaping how innovative tools reach the frontline workers who need them most.',
-    image: `${import.meta.env.BASE_URL}Headshot - DEAN.jpg`,
+    image: `${import.meta.env.BASE_URL}Headshot2 - DEAN.png`,
   },
   {
     name: 'Reid Betts',
     role: 'CEO & Co-Founder',
     bio: 'With years on the headset and over a decade in the classroom, Reid understands what it takes to build call takers who perform at the highest level.',
-    image: `${import.meta.env.BASE_URL}reid-heashot.jpg`,
+    image: `${import.meta.env.BASE_URL}Headshot2 - REID.png`,
+  },
+  {
+    name: 'Brianna Girdler',
+    role: 'Director of Operations',
+    bio: 'After a decade leading operations in the non-profit world, Brianna now helps modernize industries that have been slow to evolve past legacy systems.',
+    image: `${import.meta.env.BASE_URL}Headshot2 - BRIANNA.png`,
   },
 ]
 
@@ -53,14 +59,13 @@ export default function Team() {
           <span className="font-mono text-xs text-charcoal/40 uppercase tracking-widest">
             The Team
           </span>
-          <h2 className="font-heading font-bold text-3xl md:text-5xl tracking-tighter-custom text-charcoal mt-4">
-            Built by people who
-            <br />
-            <span className="font-drama italic text-clay">answered the call.</span>
+          <h2 className="font-heading font-bold text-3xl md:text-5xl tracking-tighter-custom text-clay mt-4">
+            The People Behind <span className="text-charcoal">ERSIM</span>
+            <img src={`${import.meta.env.BASE_URL}960px-Maple_Leaf.svg.png`} alt="" className="inline-block h-5 md:h-7 w-auto ml-2 -mt-1" />
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {TEAM.map((member) => (
             <div
               key={member.name}

@@ -121,16 +121,11 @@ export const FOOTER = {
 }
 
 export const PRODUCTS = {
-  header: {
-    eyebrow: 'Our Products',
-    headline: 'Built for every seat in the comms centre.',
-    sub: 'One platform, three simulators, each purpose-built for the people who answer, dispatch, and respond.',
-  },
   soteria: {
     status: 'Available Now',
     name: 'Soteria',
     tagline: 'The 911 call taker simulator.',
-    body: 'Soteria compresses months of on-the-job, one-on-one training into weeks of immersive practice. Trainees take realistic calls, get graded against a proprietary rubric, and build the reflexes of a veteran before they ever pick up a live line.',
+    body: 'Soteria compresses months of OTJ, one-on-one training into weeks of immersive practice. Trainees take realistic calls, get graded against a proprietary rubric, and build the reflexes of a veteran before they ever pick up a live line.',
     pillars: [
       {
         icon: 'ServerOff',
@@ -143,9 +138,9 @@ export const PRODUCTS = {
         body: 'Monitor live sessions, review recordings, and track progress across your cohort.',
       },
       {
-        icon: 'Users',
-        title: 'Scales to 50+ Trainees',
-        body: 'Onboard entire classes without rebuilding anything on your end.',
+        icon: 'ShieldCheck',
+        title: 'Fail Safely',
+        body: 'Trainees can stumble, misread a call, and recover. Every mistake becomes a lesson instead of a liability.',
       },
       {
         icon: 'ClipboardCheck',
@@ -153,7 +148,49 @@ export const PRODUCTS = {
         body: 'Objective scoring against the patterns that separate good call takers from great ones.',
       },
     ],
-    cta: { label: 'Book a Consultation', target: '#contact' },
+    cta: { label: 'Book A Demo', target: '#contact' },
+    packages: {
+      eyebrow: 'Deployment Options',
+      headline: 'Scoped to your service.',
+      sub: 'Every deployment pulls from a bank of 50+ scenarios vetted by active call takers. Final scope is set during the consultation.',
+      tiers: [
+        {
+          numeral: 'I',
+          name: 'Municipal',
+          scope: 'Single-service PSAPs and city agencies.',
+          onboarding: '1–2 weeks',
+          specs: [
+            { label: 'Seats', value: 'Up to 10' },
+            { label: 'Scenarios', value: '10 curated' },
+            { label: 'Custom authoring', value: 'On request' },
+          ],
+        },
+        {
+          numeral: 'II',
+          name: 'Regional',
+          emphasized: true,
+          scope: 'Integrated multi-municipality services.',
+          onboarding: '1–2 weeks',
+          specs: [
+            { label: 'Seats', value: 'Up to 50' },
+            { label: 'Scenarios', value: '25 curated' },
+            { label: 'Custom authoring', value: 'On request' },
+          ],
+        },
+        {
+          numeral: 'III',
+          name: 'Provincial',
+          scope: 'Province-wide and federal-scale deployments.',
+          onboarding: '4 weeks',
+          specs: [
+            { label: 'Seats', value: 'Unlimited' },
+            { label: 'Scenarios', value: 'Full access' },
+            { label: 'Custom authoring', value: 'Built with your agency' },
+          ],
+        },
+      ],
+      cta: { label: 'Book A Demo', target: '#contact' },
+    },
   },
   upcoming: {
     eyebrow: 'Coming Soon',
@@ -161,13 +198,21 @@ export const PRODUCTS = {
     products: [
       {
         name: 'Marathon',
+        status: 'Q1 2027',
         tagline: 'The dispatch trainer.',
-        body: "Built on the same engine as Soteria, tuned for the dispatcher's seat. Train unit assignment, radio discipline, and multi-incident awareness under pressure — without tying up a veteran for weeks.",
+        body: "Built on the same engine as Soteria, tuned for the dispatcher's seat. Train unit assignment, radio discipline, and multi-incident awareness under pressure, without tying up a veteran for weeks.",
+        headingClass:
+          'bg-gradient-to-br from-[#8AB5E6] via-[#4A7FCC] to-[#264F8F] bg-clip-text text-transparent',
+        taglineColor: 'text-[#4A7FCC]',
       },
       {
         name: 'Apollo',
+        status: 'Q4 2027',
         tagline: 'The EMS + fire trainer.',
-        body: 'Bringing the Soteria approach to paramedics and firefighters. Realistic scenarios, measurable outcomes, and the same proprietary rubric — adapted for the people who show up on scene.',
+        body: 'Bringing the Soteria approach to paramedics and firefighters. Realistic scenarios, measurable outcomes, and the same proprietary rubric, adapted for the people who show up on scene.',
+        headingClass:
+          'bg-gradient-to-br from-[#E69A8A] via-[#CC4A4A] to-[#8F2626] bg-clip-text text-transparent',
+        taglineColor: 'text-[#CC4A4A]',
       },
     ],
   },
