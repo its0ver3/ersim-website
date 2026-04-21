@@ -8,7 +8,7 @@ export const BRAND = {
 export const NAV_LINKS = [
   { label: 'Products', href: '/products' },
   { label: 'Team', href: '#team' },
-  { label: 'Pricing', href: '#pricing' },
+  { label: 'Contact', href: '#contact' },
 ]
 
 export const HERO = {
