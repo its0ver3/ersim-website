@@ -10,9 +10,6 @@ const LINKS = [
 ]
 
 const CONTACT = {
-  email: 'enterprise@ersim.ca',
-  phone: '604-911-ERSM',
-  phoneHref: 'tel:+16049113776',
   address: '2800 Douglas Rd, Burnaby, BC',
   mapHref: 'https://maps.google.com/?q=2800+Douglas+Rd+Burnaby+BC',
 }
@@ -55,18 +52,6 @@ export default function Footer() {
 
           {/* Contact */}
           <address className="not-italic flex flex-col gap-y-3 text-sm">
-            <a
-              href={`mailto:${CONTACT.email}`}
-              className="text-cream/50 hover:text-cream transition-all duration-300 hover:translate-y-[-1px]"
-            >
-              {CONTACT.email}
-            </a>
-            <a
-              href={CONTACT.phoneHref}
-              className="text-cream/50 hover:text-cream transition-all duration-300 hover:translate-y-[-1px]"
-            >
-              {CONTACT.phone}
-            </a>
             <a
               href={CONTACT.mapHref}
               target="_blank"
